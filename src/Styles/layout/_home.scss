@@ -1,0 +1,29 @@
+
+.main-layout{
+    display: grid;
+    grid-template-columns:  [sidebar-start] 200px [sidebar-end content-v-start] 1fr [content-v-end];
+    grid-template-rows:  [header-start] 150px [header-end content-h-start] 1fr [content-h-end];
+    grid-gap: 30px;
+    height: 100vh;
+}
+
+.header{
+    background-color: #ccc;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+}
+
+
+.sidebar{
+    background-color: #ccc;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content{
+    background-color: #ccc;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}

@@ -1,0 +1,168 @@
+.main-layout {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: [sidebar-start] 200px [sidebar-end content-v-start] 1fr [content-v-end];
+      grid-template-columns: [sidebar-start] 200px [sidebar-end content-v-start] 1fr [content-v-end];
+  -ms-grid-rows: [header-start] 150px [header-end content-h-start] 1fr [content-h-end];
+      grid-template-rows: [header-start] 150px [header-end content-h-start] 1fr [content-h-end];
+  grid-gap: 30px;
+  height: 100vh;
+}
+
+.header {
+  background-color: #ccc;
+  grid-column: 1 / -1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+}
+
+.sidebar {
+  background-color: #ccc;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-content {
+  background-color: #ccc;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+:root {
+  --space-cadet: #302f4dff;
+  --manatee: #8d99aeff;
+  --alice-blue: #edf2f4ff;
+  --imperial-red: #ef233cff;
+  --amaranth-red: #d90429ff;
+  --color-primary: #eb2f64;
+  --color-primary-light: #FF3366;
+  --color-primary-dark: #BA265D;
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+  --shadow-dark:  0  2rem 6rem rgba(0, 0, 0, .3);
+  --shadow-light:  0  2rem 6rem rgba(0, 0, 0, .06);
+  --line: 1px solid var(--color-grey-light-2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#f0eeee), to(#ccc));
+  background-image: linear-gradient(to right bottom, #f0eeee, #ccc);
+  min-height: 100vh;
+}
+
+.button {
+  position: relative;
+  height: 70px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button:not(:first-child) {
+  margin-top: 45px;
+}
+
+.button__text {
+  margin-left: 3rem;
+  font-size: 1.75rem;
+  color: var(--color-grey-dark-2);
+  z-index: 5;
+}
+
+.button__current {
+  background-color: var(--space-cadet);
+}
+
+.button::before {
+  z-index: 2;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5px;
+  background-color: var(--space-cadet);
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: width 0.7s cubic-bezier(1, 0, 0, 0.4) 0.2s, -webkit-transform 0.2s;
+  transition: width 0.7s cubic-bezier(1, 0, 0, 0.4) 0.2s, -webkit-transform 0.2s;
+  transition: transform 0.2s, width 0.7s cubic-bezier(1, 0, 0, 0.4) 0.2s;
+  transition: transform 0.2s, width 0.7s cubic-bezier(1, 0, 0, 0.4) 0.2s, -webkit-transform 0.2s;
+}
+
+.button:hover::before {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  width: 100%;
+}
+
+.button::after {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5px;
+  background-color: var(--manatee);
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, -webkit-transform 0.2s;
+  transition: width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, -webkit-transform 0.2s;
+  transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+  transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, -webkit-transform 0.2s;
+}
+
+.button:hover::after {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  width: 100%;
+}
+/*# sourceMappingURL=main.css.map */

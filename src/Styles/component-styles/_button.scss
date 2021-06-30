@@ -1,0 +1,56 @@
+.button{
+    position: relative;
+    &:not(:first-child){
+        margin-top: 45px;
+    }        
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    &__text{
+        margin-left: 3rem;
+        font-size: 1.75rem;
+        color: var(--color-grey-dark-2);
+        z-index: 5;
+    }
+
+    &__current{
+        background-color:var(--space-cadet) ;
+    }
+
+    &::before{
+        z-index: 2;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 5px;
+        background-color: var(--space-cadet);
+        transform: scaleY(0);
+        transition: transform .2s,
+                    width .7s  cubic-bezier(1, 0, 0, .4) .2s;
+    }
+    &:hover::before{
+        transform: scaleY(1);  
+        width: 100%;      
+    }
+
+    &::after{
+        z-index: 1;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 5px;
+        background-color: var(--manatee);
+        transform: scaleY(0);
+        transition: transform .2s,
+                    width .4s  cubic-bezier(1, 0, 0, 1) .2s;
+    }
+    &:hover::after{
+        transform: scaleY(1);  
+        width: 100%;      
+    }
+}

@@ -1,13 +1,12 @@
 :root{
-    --space-cadet: #302f4dff;
-    --manatee: #8d99aeff;
-    --alice-blue: #edf2f4ff;
-    --imperial-red: #ef233cff;
-    --amaranth-red: #d90429ff;
+    --main-color-bg: #273247;
+    --secondary-color-bg: #273247;
+    --tertiary-color-bg: #615d75;
+    --main-color-text: #e1ddd1;
+    --secondary-color-text: #6786b5;
     
-    --color-primary: #eb2f64;
-    --color-primary-light: #FF3366;
-    --color-primary-dark: #BA265D;
+    --color-primary: #b0a383;
+    --color-primary-light: #797257;
 
     --color-grey-light-1: #faf9f9;
     --color-grey-light-2: #f4f2f2;
@@ -41,10 +40,35 @@ html{
 }
 
 body{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    color: var(--primary-color-text);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-size: 2rem;
     line-height: 1.6;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(to right bottom, #f0eeee, #ccc);
     min-height: 100vh;
+}
+
+h2{
+    &::selection {
+        color: none;
+        background: none;
+    }
+    color: var(--secondary-color-text);   
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-size: 6rem;
+    line-height: 1.6;
+}
+
+
+h3{
+    &::selection {
+        color: none;
+        background: none;
+    }
+    color: var(--secondary-color-text);   
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 1.6;
 }

@@ -2,7 +2,9 @@ import React from 'react';
 
 const Education = (props) =>{
     return(
-        <div>edu</div>
+        <div className={`center-text ${props.visVal ? 'main-content-show' : 'main-content-hide'}`}>
+            Edu
+        </div>
     );
 };
 

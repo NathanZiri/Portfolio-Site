@@ -2,7 +2,9 @@ import React from 'react';
 
 const Contact = (props) =>{
     return(
-        <div>contact</div>
+        <div className={`center-text ${props.visVal ? 'main-content-show' : 'main-content-hide'}`}>
+            Contact
+        </div>
     );
 };
 

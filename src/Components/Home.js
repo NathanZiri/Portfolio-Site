@@ -1,5 +1,4 @@
 import React, { useState }  from 'react';
-import "./../Styles/main.css";
 
 const Home = (props) =>{
     var today = new Date();

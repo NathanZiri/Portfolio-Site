@@ -6,6 +6,7 @@ import Work from "./Components/Work";
 import Education from "./Components/Education";
 import Contact from "./Components/Contact";
 import React, { useState } from "react";
+import { Scrollbars } from 'react-custom-scrollbars';
 
 function App() {
     const [currentDisp, setNewDisp] = useState(1);
@@ -44,10 +45,12 @@ function App() {
                 />
             </div>
             <div className="main-content">
-                <Home  dispText="show" visVal={parseInt(currentDisp)===1 ? true : false} />
-                <Education dispText="hide" visVal={parseInt(currentDisp)===2 ? true : false} />
-                <Work dispText="hide" visVal={parseInt(currentDisp)===3 ? true : false} />
-                <Contact dispText="hide" visVal={parseInt(currentDisp)===4 ? true : false} />
+                <Scrollbars>
+                    <Home  dispText="show" visVal={parseInt(currentDisp)===1 ? true : false} />
+                    <Education dispText="hide" visVal={parseInt(currentDisp)===2 ? true : false} />
+                    <Work dispText="hide" visVal={parseInt(currentDisp)===3 ? true : false} />
+                    <Contact dispText="hide" visVal={parseInt(currentDisp)===4 ? true : false} />
+                </Scrollbars>
             </div>
         </div>
     );

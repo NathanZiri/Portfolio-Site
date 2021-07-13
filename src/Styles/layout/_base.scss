@@ -72,3 +72,21 @@ h3{
     font-size: 3rem;
     line-height: 1.6;
 }
+
+
+ul {
+	position: relative;
+	list-style: none;
+	margin-left: 0;
+	padding-left: 1.2em;
+}
+ul li:before {
+    margin-left: 4rem;
+	content: ">";
+	position: absolute;
+	left: 0;
+}
+
+li{
+    margin-left: 4rem;
+}

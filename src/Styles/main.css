@@ -62,7 +62,6 @@
 }
 
 .main-content-show {
-  max-width: calc(100% - 2rem);
   -webkit-animation: appear .5s ease-in;
           animation: appear .5s ease-in;
 }
@@ -82,6 +81,7 @@
     opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
+    width: 100%;
   }
 }
 
@@ -96,6 +96,7 @@
     opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
+    width: 100%;
   }
 }
 
@@ -190,6 +191,24 @@ h3::selection {
   background: none;
 }
 
+ul {
+  position: relative;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 1.2em;
+}
+
+ul li:before {
+  margin-left: 4rem;
+  content: ">";
+  position: absolute;
+  left: 0;
+}
+
+li {
+  margin-left: 4rem;
+}
+
 .button {
   cursor: pointer;
   position: relative;
@@ -276,15 +295,15 @@ h3::selection {
 
 .dropdown-small-show {
   max-width: calc(100% - 1rem);
-  -webkit-transition: all .5s ease-in;
-  transition: all .5s ease-in;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
   opacity: 1;
   height: 250px;
 }
 
 .dropdown-small-hide {
-  -webkit-transition: all .5s ease-out;
-  transition: all .5s ease-out;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
   opacity: 0;
   height: 0;
 }
@@ -295,8 +314,8 @@ h3::selection {
 
 .dropdown-large-show {
   max-width: calc(100% - 1rem);
-  -webkit-transition: all .5s ease-in;
-  transition: all .5s ease-in;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
   opacity: 1;
   height: -webkit-min-content;
   height: -moz-min-content;
@@ -304,8 +323,8 @@ h3::selection {
 }
 
 .dropdown-large-hide {
-  -webkit-transition: all .5s ease-out;
-  transition: all .5s ease-out;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
   opacity: 0;
   height: 0;
 }

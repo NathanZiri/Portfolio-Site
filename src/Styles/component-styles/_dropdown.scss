@@ -3,13 +3,13 @@
 
     &-show{
         max-width: calc(100% - 1rem);
-        transition: all .5s ease-in;
+        transition: all .3s ease-in;
         opacity: 1;
         height: 250px;
     }
     
     &-hide{
-        transition: all .5s ease-out;
+        transition: all .3s ease-out;
         opacity: 0;
         height: 0;
     }
@@ -20,13 +20,13 @@
 
     &-show{
         max-width: calc(100% - 1rem);
-        transition: all .5s ease-in;
+        transition: all .3s ease-in;
         opacity: 1;
         height: min-content;
     }
     
     &-hide{
-        transition: all .5s ease-out;
+        transition: all .3s ease-out;
         opacity: 0;
         height: 0;
     }

@@ -1,12 +1,19 @@
 
 .main-layout{
+    overflow-y: scroll;
+    overflow-x: hidden;
     background-color: var(--main-color-bg);
     color: var(--main-color-text);
     display: grid;
     grid-template-columns:  [sidebar-start] 200px [sidebar-end content-v-start] 1fr [content-v-end];
-    grid-template-rows:  [header-start] 150px [header-end content-h-start] 1fr [content-h-end];
+    grid-template-rows:  [header-start] 100px [header-end content-h-start] 1fr [content-h-end];
     grid-gap: 30px;
     height: 100vh;
+
+    @media (max-width: 900px){
+        display: block;
+        height: 100vh;
+    }
 }
 
 .header{
@@ -41,7 +48,12 @@
     grid-row: 2 / 3;
     transition: all 3s;
     overflow-y: scroll;
-    margin:.5rem;
+    overflow-x: hidden;
+    
+    @media (max-width: 900px){
+        height: 100%;
+    }
+
     &-show{
         animation: appear .5s ease-in;
     }

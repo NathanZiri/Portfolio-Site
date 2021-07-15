@@ -18,6 +18,9 @@ const Work = (props) =>{
         <div className={`center-text ${props.visVal ? 'main-content-show' : 'main-content-hide'}`}>
             <h2 onClick={saveBombardierDrop}>
                 Bombardier
+                <span className={`drop-arrow  ${BombardierDrop ?  'drop-arrow-down' : 'drop-arrow-right'}`}>
+                    {'>'}
+                </span>
             </h2>
             <div style={{overflow:"hidden"}}>
                 <div className={`home-text ${BombardierDrop ? 'dropdown-small-show' : 'dropdown-small-hide'}`}>
@@ -45,9 +48,12 @@ const Work = (props) =>{
 
             <h2 onClick={saveEriscssonDrop}>
                 Ericsson
+                <span className={`drop-arrow  ${ericssonDrop ?  'drop-arrow-down' : 'drop-arrow-right'}`}>
+                    {'>'}
+                </span>
             </h2>
             <div style={{overflow:"hidden"}}>
-                <div className={`home-text ${ericssonDrop ? 'dropdown-small-show' : 'dropdown-small-hide'}`}>
+                <div className={`home-text ${ericssonDrop ? 'dropdown-large-show' : 'dropdown-large-hide'}`}>
                     <ul>
                         <li>Postion: Analytics Solutions Designer</li>
                         <li>Employment period: August 2018 - September 2018</li>

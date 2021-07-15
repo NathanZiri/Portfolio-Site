@@ -1,0 +1,14 @@
+.link-containers{
+    padding-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.site-image{
+    @media (max-width: 900px){
+        width:90px;
+        height: 90px;
+    }
+    width:120px;
+    height: 120px;
+}

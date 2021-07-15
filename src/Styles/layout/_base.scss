@@ -4,9 +4,11 @@
     --tertiary-color-bg: #615d75;
     --main-color-text: #e1ddd1;
     --secondary-color-text: #6786b5;
+    --tertiary-color-text: #98afd1;
     
-    --color-primary: #b0a383;
-    --color-primary-light: #797257;
+    --color-primary: #797257;
+    --color-primary-light: #b0a383;
+    
 
     --color-grey-light-1: #faf9f9;
     --color-grey-light-2: #f4f2f2;
@@ -30,6 +32,14 @@
 html{
     box-sizing: border-box;
     font-size: 62.5%;
+
+    @media (max-width: 900px){
+        font-size: 37.5%;
+    }
+
+    @media (max-width: 1200px){
+        font-size: 50%;
+    }
 }
 
 
@@ -40,7 +50,7 @@ html{
 }
 
 body{
-    color: var(--primary-color-text);
+    color: var(--main-color-text);
     font-family: 'Courier New', Courier, monospace;
     font-weight: 500;
     font-size: 2rem;
@@ -49,6 +59,13 @@ body{
 }
 
 h2{
+    @media (max-width: 900px){
+        font-size: 5rem;
+    }
+    &:hover{
+        cursor: pointer;
+        background-color: #374153;
+    }
     &::selection {
         color: none;
         background: none;
@@ -58,6 +75,7 @@ h2{
     font-weight: 500;
     font-size: 6rem;
     line-height: 1.6;
+    transition: all .3s;
 }
 
 
@@ -66,6 +84,11 @@ h3{
         color: none;
         background: none;
     }
+    &:hover{
+        cursor: pointer;
+        background-color: #374153;
+    }
+    transition: all .3s;
     color: var(--secondary-color-text);   
     font-family: 'Courier New', Courier, monospace;
     font-weight: 500;

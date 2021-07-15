@@ -15,7 +15,10 @@ const Education = (props) =>{
     return(
         <div className={`center-text ${props.visVal ? 'main-content-show' : 'main-content-hide'}`}>
             <h2 onClick={saveUniVis}>
-            ----- University
+            Concordia University
+            <span className={`drop-arrow  ${uniVis ?  'drop-arrow-down' : 'drop-arrow-right'}`}>
+                {'>'}
+            </span>
             </h2>
             <div style={{overflow:"hidden"}}>
                 <div className={`${uniVis ? 'dropdown-small-show' : 'dropdown-small-hide'}`}>
@@ -27,7 +30,10 @@ const Education = (props) =>{
                 </div>
             </div>
             <h2 onClick={saveCollegeVis}>
-            ----- College
+                Dawson College
+                <span className={`drop-arrow  ${collegeVis ?  'drop-arrow-down' : 'drop-arrow-right'}`}>
+                    {'>'}
+                </span>
             </h2>
             <div style={{overflow:"hidden"}}>
                 <div className={`${collegeVis ? 'dropdown-small-show' : 'dropdown-small-hide'}`}>

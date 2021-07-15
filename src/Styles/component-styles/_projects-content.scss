@@ -1,0 +1,45 @@
+.home-text{
+    position: relative;
+}
+.game
+{
+    &-description{
+        position: relative;
+        display: inline-block;
+        max-width: calc(100% - 400px);
+        vertical-align: top;
+
+        @media (max-width: 1300px){
+            max-width: 100%;
+        }
+    }
+
+    &-link{
+        text-decoration: none;
+        border: none;
+        color: var(--tertiary-color-text);
+        font: inherit;
+        font-size: inherit;
+        border-bottom: 1px solid currentColor;
+        padding-bottom: -5px;
+        display: inline-block;
+        background-color: transparent;
+        cursor: pointer;
+        transition: color .3s;
+
+        &:hover{
+            color: var(--secondary-color-text);
+        }
+    }
+
+    &-image{
+        @media (max-width: 1300px){
+            display: none;
+        }
+        position: absolute;
+        top: 0;
+        right: -10px;
+        display: inline-block;
+        max-height: 250px;
+    }
+}

@@ -7,7 +7,7 @@ import LI_logo from './../Images/LI_logo.png';
 const Contact = (props) =>{
     return(
         <div className={`center-text ${props.visVal ? 'main-content-show' : 'main-content-hide'}`}>
-            If you want to get in contact with me you can send me a message on FaceBook, LinkedIn or <a href = "mailto: abc@example.com" className="game-link">send me an Email</a> for a faster response. For my previous projects you can check my github.
+            If you want to get in contact with me you can send me a message on FaceBook, LinkedIn or <a href = "mailto:nathanziri@hotmail.com" className="game-link">send me an Email</a> for a faster response. For my previous projects you can check my github.
             <div className="link-containers">
             <a href="https://www.facebook.com/nathan.ziri.3" target="_blank"><img src={LI_logo} className="site-image"></img></a>
             <a href="https://www.linkedin.com/in/nathan-ziri-417032156/?originalSubdomain=ca" target="_blank"><img src={facebook_logo} className="site-image"></img></a>
